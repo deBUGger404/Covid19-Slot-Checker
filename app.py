@@ -21,7 +21,7 @@ dicts = dict(zip( df['district name'],df['district id']))
 unique_dist = list(df["district name"].unique())
 unique_dist.sort()
 
-no_days = streamlit.sidebar.slider('Select Date Range', 0, 100, 5)
+no_days = streamlit.sidebar.slider('Select Days Range', 0, 100, 5)
 dist_new = streamlit.sidebar.selectbox('Select District Name', unique_dist)
 # pin_col, age_col, fee_col, avail_col = streamlit.sidebar.beta_columns(4)
 
