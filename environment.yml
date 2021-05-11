@@ -1,4 +1,4 @@
-name: covid-vaccination-slot-availability
+name: covid-app
 channels:
 - defaults
 - conda-forge
