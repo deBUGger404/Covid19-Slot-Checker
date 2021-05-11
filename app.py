@@ -30,8 +30,6 @@ base = datetime.datetime.today()
 list_date = [base + datetime.timedelta(days=day) for day in range(no_days)]
 date_stamp = [x.strftime("%d-%m-%Y") for x in list_date]
 
-streamlit.write(dist_new_val)
-
 data1 = pd.DataFrame()
 header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'}
 # ua = UserAgent()
@@ -40,7 +38,6 @@ header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWe
 for date_ in date_stamp:
     URL = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict?district_id={}&date={}".format(dist_new_val, date_)
     response = requests.get(URL, headers=header)
-    streamlit.write(response)
     if (response.ok):
         assert 'centers' in json.loads(response.text)
         if response.json()['centers'] is not None:
@@ -58,8 +55,8 @@ for date_ in date_stamp:
                     data1 = deepcopy(data)
             else:
                 streamlit.error("No rows in the data Extracted from the API")
-    else:
-        streamlit.error("Invalid response")
+#     else:
+#         streamlit.error("Invalid response")
 
 col_rename = {'date': 'Date','min_age_limit': 'Minimum Age Limit','available_capacity': 'Available Capacity','vaccine': 'Vaccine','pincode': 'Pincode','name': 'Hospital Name','state_name' : 'State','district_name' : 'District','block_name': 'Block Name','fee_type' : 'Fees'}
 
