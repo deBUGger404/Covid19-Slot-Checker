@@ -5,7 +5,7 @@ import requests
 import pandas as pd
 import streamlit
 from copy import deepcopy
-
+from fake_useragent import UserAgent
 
 streamlit.title('Covid Vaccination Slot Availability')
 
@@ -33,8 +33,10 @@ date_stamp = [x.strftime("%d-%m-%Y") for x in list_date]
 streamlit.write(dist_new_val)
 
 data1 = pd.DataFrame()
-header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'}
-# header = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.76 Safari/537.36'}
+# header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'}
+ua = UserAgent()
+header = {'User-Agent':str(ua.chrome)}
+
 for date_ in date_stamp:
     URL = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict?district_id={}&date={}".format(dist_new_val, date_)
     response = requests.get(URL, headers=header)
