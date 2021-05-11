@@ -6,6 +6,7 @@ channels:
 dependencies:
 - python=3.8
 - conda
+- scikit-learn
 - scipy
 - pandas
 - numpy
@@ -13,6 +14,7 @@ dependencies:
 - pip
 - pylint
 - pydocstyle
+- flake8
 - black
 - hvplot
 - bokeh
