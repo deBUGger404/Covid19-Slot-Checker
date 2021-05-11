@@ -19,5 +19,7 @@ dependencies:
 - hvplot
 - bokeh
 - holoviews
+- jupyter-server-proxy
 - pip:
   - streamlit
+  - streamlit-folium
