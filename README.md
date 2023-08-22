@@ -20,7 +20,7 @@ Before running the script, make sure you have the following installed:
 You can install the required packages using the following command:
 
 ```bash
-pip install streamlit pandas requests
+pip install streamlit pandas requests ```
 
 Clone this repository to your local machine:
 
