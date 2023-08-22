@@ -20,19 +20,24 @@ Before running the script, make sure you have the following installed:
 You can install the required packages using the following command:
 
 ```bash
-pip install streamlit pandas requests ```
+pip install streamlit pandas requests
+```
+## Usage
 
 Clone this repository to your local machine:
-
+```bash
 https://github.com/deBUGger404/Covid19-Slot-Checker.git
+```
 
 Navigate to the project directory:
-
+```bash
 cd Covid19-Slot-Checker
+```
 
 Run the Streamlit app:
-
+```bash
 streamlit run app.py
+```
 
 Interact with the app through your web browser. Select the number of days, district name, and use the filters to view vaccination slot availability.
 
