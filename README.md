@@ -44,5 +44,8 @@ Interact with the app through your web browser. Select the number of days, distr
 ## Data Source
 The district-wise data is obtained from the "district_code.csv" file, which is used to map district names to their corresponding district IDs.
 
+## Access Streamlit App 
+[a link](https://covid19-slot-checker.streamlit.app/)
+
 Feel free to contribute, report issues, or provide suggestions for improvement. Contributions are always welcome!
 
