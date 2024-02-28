@@ -2,6 +2,13 @@
 
 This is a Python script that utilizes the Streamlit framework to create a web application for checking COVID-19 vaccination slot availability in different districts of India. The script fetches data from the CoWIN API, processes it, and displays the information in a tabular format on a Streamlit app.
 
+## Application Access
+<p align="center">
+  <img src="covid19_app.png" width="80%" title="hover text">
+</p>
+
+Url of Page: [covid19-slot-checker](https://covid19-slot-checker.streamlit.app/)
+
 ## Features
 
 - Select the number of days to show vaccination availability using a slider.
