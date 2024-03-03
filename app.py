@@ -7,7 +7,7 @@ import streamlit
 from copy import deepcopy
 # from fake_useragent import UserAgent
 
-streamlit.title('Covid Vaccination Slot Availability')
+streamlit.title('CovaxFinder: Covid Vaccination Slot Availability')
 
 @streamlit.cache  # This function will be cached
 def district_wise_data():
