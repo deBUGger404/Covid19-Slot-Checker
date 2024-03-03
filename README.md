@@ -1,4 +1,4 @@
-# COVID Vaccination Slot Availability Checker
+# CovaxFinder:COVID Vaccination Slot Availability Checker
 
 This is a Python script that utilizes the Streamlit framework to create a web application for checking COVID-19 vaccination slot availability in different districts of India. The script fetches data from the CoWIN API, processes it, and displays the information in a tabular format on a Streamlit app.
 
